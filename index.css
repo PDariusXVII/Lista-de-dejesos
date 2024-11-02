@@ -1,0 +1,52 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #01335e;
+}
+
+/*CABEÇALHHO*/
+header {
+    padding: 12px;
+    background-color: #0058A3;
+    color: white;
+    display: flex;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Distribui espaço entre os elementos */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    padding: 10px;
+}
+/*FIM CABEÇALHHO*/
+
+
+
+/* ADAPTAÇÃO PARA MOBILE */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Alinha os itens em coluna */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .header-container {
+        flex-direction: column;
+        padding: 8px;
+    }
+    
+    .header-container h1 {
+        font-size: 1.5rem; /* Ajusta o tamanho da fonte */
+        margin-bottom: 8px; /* Adiciona um pequeno espaçamento */
+    }
+
+    .header-container nav {
+        font-size: 0.9rem; /* Ajusta o tamanho da fonte para navegação */
+    }
+}
+

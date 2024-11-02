@@ -1,0 +1,94 @@
+/* Estilos da seção de produtos e rodapé */
+.main-cards {
+    padding: 20px;
+}
+
+.item-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.item {
+    display: none; /* Oculta os itens por padrão */
+    background-color: rgba(255, 255, 255, 0.137);
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #e26d00;
+    border-radius: 5px;
+    width: 250px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative; /* Necessário para posicionar o indicador de quantidade */
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.item h3 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+    color: #e26d00; /* Define a cor do título do item */
+}
+
+.item .price {
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.item a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    background-color: #3498db;
+    padding: 8px 15px;
+    border-radius: 8px;
+    border: 1px solid #e26d00;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.item a:hover {
+    background-color: #2980b9;
+}
+
+.total {
+    background-color: #333;
+    border-radius: 25px;
+    border: 1px solid white;
+    height: 50px;
+    margin-top: 20px;
+    font-size: 24px;
+    color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+span {
+    color: green;
+}
+
+/* Indicador de quantidade no canto superior direito do card */
+.quantidade {
+    background-color: orange;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px; /* Centraliza verticalmente o texto */
+}
+
+

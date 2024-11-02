@@ -1,0 +1,76 @@
+
+footer {
+    padding: 10px 0;
+    text-align: center;
+}
+
+.carousel-body {
+    display: grid; /* Utiliza o layout de grid para centralização */
+    place-content: center; /* Centraliza o conteúdo tanto horizontal quanto verticalmente */
+    background-color: var(--bg-clr); /* Aplica a cor de fundo definida na variável */
+    background-color: #0058A0;
+    height: 80px;
+}
+
+/* Estiliza o wrapper do carrossel, que contém todo o conteúdo deslizante */
+.carousel-wrapper {
+    --width: 50px; /* Largura de cada item do carrossel */
+    --gap: 0; /* Espaçamento entre os itens */
+    --num-items: 10; /* Número total de itens no carrossel */
+    --ani-offset: calc(var(--width) * var(--num-items) * -1); /* Calcula o deslocamento total da animação */
+    --ani-speed: 10s; /* Duração total da animação */
+    width: 500px; /* Largura visível do carrossel */
+    overflow: hidden; /* Esconde o conteúdo que excede a largura definida */
+    position: relative; /* Define o posicionamento relativo para os pseudoelementos */
+}
+
+/* Cria pseudoelementos ::before e ::after para adicionar gradientes nas laterais */
+.carousel-wrapper::before,
+.carousel-wrapper::after {
+    content: ''; /* Conteúdo vazio para os pseudoelementos */
+    position: absolute; /* Posicionamento absoluto em relação ao wrapper */
+    width: 20%; /* Largura de 20% do wrapper */
+    height: 100%; /* Altura de 100% do wrapper */
+    z-index: 1; /* Define a ordem de empilhamento para ficar acima dos itens */
+    top: 0; /* Alinha ao topo do wrapper */
+}
+
+/* Pseudoelemento ::before para criar um gradiente da esquerda */
+.carousel-wrapper::before {
+    left: 0; /* Alinha à esquerda do wrapper */
+    background-image: linear-gradient(to right, var(--bg-clr) 0%, transparent 50%); /* Gradiente da cor de fundo para transparente */
+}
+
+/* Pseudoelemento ::after para criar um gradiente da direita */
+.carousel-wrapper::after {
+    right: 0; /* Alinha à direita do wrapper */
+    background-image: linear-gradient(to left, var(--bg-clr) 0%, transparent 50%); /* Gradiente da cor de fundo para transparente */
+}
+
+/* Estiliza o contêiner interno do carrossel que desliza */
+.carousel {
+    display: flex; /* Utiliza flexbox para layout horizontal dos itens */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    animation: slide var(--ani-speed) linear infinite; /* Aplica a animação de deslizamento contínuo */
+}
+
+/* Estiliza cada item individual do carrossel */
+.carousel .item {
+    flex: 1 0 var(--width); /* Flex-grow: 1, Flex-shrink: 0, Flex-basis: var(--width) */
+    text-align: center; /* Centraliza o conteúdo textual */
+    padding: 1rem; /* Adiciona preenchimento interno */
+}
+
+/* Estiliza as imagens dentro de cada item para garantir responsividade e cobertura */
+.carousel .item > img {
+    width: 100%; /* Define a largura da imagem para 100% do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: cover; /* Cobre completamente o contêiner mantendo a proporção */
+}
+
+/* Define a animação de deslizamento do carrossel */
+@keyframes slide {
+    100% {
+        transform: translateX(var(--ani-offset)); /* Move o carrossel horizontalmente para a esquerda */
+    }
+}

@@ -1,0 +1,445 @@
+<html lang="pt-BR"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Funcional</title>
+
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/inter-ui/3.19.3/inter.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.15.0/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./header.css">
+    <link rel="stylesheet" href="./banner.css">
+    <link rel="stylesheet" href="./cards.css">
+    <link rel="stylesheet" href="./footer.css">
+    <link rel="stylesheet" href="./mobile.css">
+
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  
+  </head>
+  <body>
+  
+    <header>
+        
+      <div class="header-container">
+
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Buscar...">
+            <button class="search-btn" onclick="searchItems()">Pesquisar</button>
+        </div>
+
+      <!-- Menu para Desktop -->
+        <div class="menu">
+            <nav>
+                <ul>
+                    <li class="active"><button onclick="filterItems('tudo')">Tudo</button></li>
+                    <li><button onclick="filterItems('hardware')">Hardwares</button></li>
+                    <li><button onclick="filterItems('moveis')">Móveis</button></li>
+                    <li><button onclick="filterItems('perifericos')">Periféricos</button></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <br>
+  <!-- Dropdown para Mobile -->
+  <div class="dropdown-container" style="@media (max-width: 768px) display: none;">
+    <button class="dropdown-button" onclick="toggleDropdown()">Categorias
+        <span class="dropdown-arrow">▼</span>
+    </button>
+    <ul class="dropdown-list" id="dropdownList">
+        <li><a href="#" onclick="filterItems('tudo')">Tudo</a></li>
+        <li><a href="#" onclick="filterItems('hardware')">Hardwares</a></li>
+        <li><a href="#" onclick="filterItems('moveis')">Móveis</a></li>
+        <li><a href="#" onclick="filterItems('perifericos')">Periféricos</a></li>
+    </ul>
+</div>
+
+      </div class="header-container"> 
+        
+</header>
+
+<h4>
+    <span class="magic">
+      <span class="magic-star">
+        <svg viewBox="0 0 512 512">
+        <path d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
+        </svg>
+      </span>
+      <span class="magic-star">
+        <svg viewBox="0 0 512 512">
+        <path d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
+        </svg>
+      </span>
+      <span class="magic-star">
+        <svg viewBox="0 0 512 512">
+        <path d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
+        </svg>
+      </span>
+        <span class="magic-text">SETUP GAMER</span>
+      </span>
+    </span>
+</h4>
+
+      <main class="cards"></main>
+        <div class="item-container" id="item-container">
+
+           <div class="item hardware">
+                <div class="quantidade">1</div> <!-- Adicione este div para a quantidade -->
+                <img src="https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/x/6/x670e-aorus-xtreme2.jpg" alt="Placa-mãe Gigabyte X670E Aorus Xtreme">
+                <h3>Placa-mãe Gigabyte X670E Aorus Xtreme</h3>
+                <div class="price">R$ 7058,81</div>
+                <a href="https://www.pichau.com.br/placa-mae-gigabyte-x670e-aorus-xtreme-ddr5-socket-am5-e-atx-chipset-amd-x670-x670e-aorus-xtreme" target="_blank">Comprar</a>               
+            </div>
+                      
+       <div class="item hardware">
+                        <div class="quantidade">1</div>
+                          <img src="https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/1/0/100-100000662wof.jpg" alt="Processador Ryzen 9 9900X">
+                          <h3>Processador Ryzen 9 9900X</h3>
+                          <div class="price">R$ 3835,69</div>
+                          <a href="https://www.pichau.com.br/processador-amd-ryzen-9-9900x-12-core-24-threads-4-4ghz-5-6ghz-turbo-cache-76mb-am5-100-100000662wof" target="_blank">Comprar</a>
+                      </div>
+                      
+                           <div class="item hardware">
+                <div class="quantidade">1</div>
+                          <img src="https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/e/3/e360-loki-blk1.jpg" alt="Water Cooler Valkyrie Syn E360 Loki Edition">
+                          <h3>Water Cooler Valkyrie Syn E360 Loki Edition</h3>
+                          <div class="price">R$ 4117,63</div>
+                          <a href="https://www.pichau.com.br/water-cooler-valkyrie-syn-e360-loki-edition-argb-360mm-preto-e360-loki-blk" target="_blank">Comprar</a>
+                      </div>
+                      
+                           <div class="item hardware">
+                <div class="quantidade">4</div>
+                          <img src="https://images4.kabum.com.br/produtos/fotos/525934/kit-cooler-fan-3-unidades-lian-li-120mm-rgb-preto-uf-al120v2-3b_1725387259_g.jpg" alt="Ventoinhas Lian Li UNI FAN AL V2">
+                          <h3>Ventoinhas Lian Li UNI FAN AL V2</h3>
+                          <div class="price">R$ 788,22</div>
+                          <a href="https://www.kabum.com.br/produto/525934/kit-com-3-ventoinhas-lian-li-uni-fan-al-v2-120mm-rgb-preto-uf-al120v2-3b" target="_blank">Comprar</a>
+                      </div>
+                      
+                           <div class="item hardware">
+                <div class="quantidade">2</div>
+                          <img src="https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/c/m/cmp64gx5m2b6400c32.jpg" alt="Memória RAM Corsair Dominator Titanium 96GB">
+                          <h3>Memória RAM Corsair Dominator Titanium 96GB</h3>
+                          <div class="price">R$ 4117,63</div>
+                          <a href="https://www.pichau.com.br/memoria-corsair-dominator-titanium-rgb-96gb-2x48gb-ddr5-6400mt-s-c32-branca-cmp96gx5m2b6400c32w" target="_blank">Comprar</a>
+                      </div>
+                      
+                           <div class="item hardware">
+                <div class="quantidade">2</div>
+                          <img src="https://images0.kabum.com.br/produtos/fotos/542130/ssd-corsair-4tb-mp700-pro-m-2-nvme-leitura-12400mb-s-e-gravacao-11800mb-s-cssd-f4000gbmp700pnh_1719854089_g.jpg" alt="Armazenamento (m.2) Corsair 4TB MP700 Pro">
+                          <h3>Armazenamento (m.2) Corsair 4TB MP700 Pro</h3>
+                          <div class="price">R$ 4941,85</div>
+                          <a href="https://www.kabum.com.br/produto/542130/ssd-corsair-4tb-mp700-pro-m-2-nvme-leitura-12400mb-s-e-gravacao-11800mb-s-cssd-f4000gbmp700pnh" target="_blank">Comprar</a>
+                      </div>
+                      
+                           <div class="item hardware">
+                <div class="quantidade">1</div>
+                          <img src="https://c1.neweggimages.com/productimage/nb1280/14-932-556-18.jpg" alt="Placa de Vídeo RTX 4090 XTREME WATERFORCE 24G">
+                          <h3>Placa de Vídeo RTX 4090 XTREME WATERFORCE 24G</h3>
+                          <div class="price">R$ 17959,90</div>
+                          <a href="https://www.newegg.com/gigabyte-geforce-rtx-4090-gv-n4090aorusx-w-24gd/p/N82E16814932556" target="_blank">Comprar</a>
+                      </div>
+                      
+                           <div class="item perifericos">
+                <div class="quantidade">1</div>
+                          <img src="https://images5.kabum.com.br/produtos/fotos/384745/kit-adaptador-cooler-master-de-placa-de-video-vertical-universal-v3-pcie-4-0-com-cabo-riser-4-0-incluso-preto-e-roxo-mca-u000r-kfvk03_1669119217_g.jpg" alt="Adaptador Cooler Master de Placa de Vídeo Vertical">
+                          <h3>Adaptador Cooler Master de Placa de Vídeo Vertical</h3>
+                          <div class="price">R$ 705,90</div>
+                          <a href="https://www.kabum.com.br/produto/384745/kit-adaptador-cooler-master-de-placa-de-video-vertical-universal-v3-pcie-4-0-com-cabo-riser-4-0-incluso-preto-e-cinza-mca-u000r-kfvk03?utm_id=21416437563&amp;gad_source=1&amp;gclid=CjwKCAjw68K4BhAuEiwAylp3kgMWEueT7H0qJ7_JfKtTwoiN04ybal6o0d69R5t2sTys_QtcbHrtVBoCDYkQAvD_BwE" target="_blank">Comprar</a>
+                      </div>
+                      
+                           <div class="item hardware">
+                <div class="quantidade">1</div>
+                          <img src="https://media.pichau.com.br/media/catalog/product/cache/ef72d3c27864510e5d4c0ce69bade259/r/o/rog-thor-1600t-gaming8.jpg" alt="Fonte Asus ROG THOR 1600W Titanium">
+                          <h3>Fonte Asus ROG THOR 1600W Titanium</h3>
+                          <div class="price">R$ 4499,99</div>
+                          <a href="https://www.pichau.com.br/fonte-asus-rog-thor-1600w-titanium-rgb-full-modular-80-plus-titanium-rog-thor-1600t-gaming" target="_blank">Comprar</a>
+                      </div>
+                      
+                            <div class="item perifericos">
+                <div class="quantidade">1</div>
+                          <img src="https://acdn.mitiendanube.com/stores/001/065/026/products/cs-hyte-y70-b-l-1-0e5198b1bd16a5976317205591002243-1024-1024.webp" alt="Gabinete Hyte Y70 Touch Black">
+                          <h3>Gabinete Hyte Y70 Touch Black</h3>
+                          <div class="price">R$ 4004,85</div>
+                          <a href="https://www.venturigaming.com.br/produtos/gabinete-gamer-hyte-y70-preto-c-lcd-touch-14-1-4k-integrada-c-cabo-riser-usb-type-c-vidro-temperedo-mid-tower-cs-hyte-y70-b-l/" target="_blank">Comprar</a>
+                      </div>
+                      
+                            <div class="item perifericos">
+                <div class="quantidade">1</div>
+                          <img src="https://images5.kabum.com.br/produtos/fotos/sync_mirakl/630035/Teclado-Asus-Rog-Azoth-Extreme-75-Wireless-OLED-Display-Color-Rog-Nx-Snow-RGB_1724694689_g.jpg" alt="Teclado Rog Azoth Extreme ">
+                          <h3>Teclado Rog Azoth Extreme </h3>
+                          <div class="price">R$ 5349,00</div>
+                          <a href="https://www.kabum.com.br/produto/630035/teclado-asus-rog-azoth-extreme-75-wireless-oled-display-color-rog-nx-snow-rgb" target="_blank">Comprar</a>
+                      </div>
+
+                            <div class="item perifericos">
+                <div class="quantidade">1</div>
+                          <img src="https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/c/h/ch-9417070-ww3.jpg" alt="Mousepad Gamer Corsair MM700">
+                          <h3>Mousepad Gamer Corsair MM700</h3>
+                          <div class="price">R$ 535,28</div>
+                          <a href="https://www.pichau.com.br/mousepad-gamer-corsair-mm700-rgb-extra-grande-930x400x4mm-ch-9417070-ww" target="_blank">Comprar</a>
+                      </div>
+                      
+                              <div class="item perifericos">
+                <div class="quantidade">1</div>
+                          <img src="https://images.kabum.com.br/produtos/fotos/112409/mouse-sem-fio-gamer-razer-basilisk-ultimate-chroma-11-botoes-20000dpi-rz01-03170100-r3u1_1587140191_gg.jpg" alt="Mouse Razer Basilisk Ultimat">
+                          <h3>Mouse Razer Basilisk Ultimat</h3>
+                          <div class="price">R$ 1549,99</div>
+                          <a href="https://www.mercadolivre.com.br/mouse-para-jogo-sem-fio-recarregavel-razer-basilisk-ultimat/p/MLB24527497#reco_item_pos=1&amp;reco_backend=ranker_retrieval_system_vpp_v2p&amp;reco_backend_type=low_level&amp;reco_client=vpp-pdp-v2p-pom&amp;reco_id=fa0810af-735f-4867-9b48-fe38b1aace37&amp;reco_model=ranker_entity_v2-retrieval-system/mlb/organicos/catalog-product-triggers/1" target="_blank">Comprar</a>
+                      </div>        
+                      
+                      <div class="item perifericos">
+                <div class="quantidade">1</div>
+                          <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRFYcu0534vYpVLD4kBA3IC8BIDJBmew4Ilpo0vd9DyuTX_QDjzDm9bXbBu9s9lghtOELhWmMpOCCMCFdTMo9a1Sg5TFYQkLxU-W5pMEjNBAbHDg_sQQFO2&amp;usqp=CAE" alt="Dock de Carregamento">
+                          <h3>Dock de Carregamento</h3>
+                          <div class="price">R$ 189,99</div>
+                          <a href="https://www.amazon.com.br/carregamento-substitui%C3%A7%C3%A3o-SIKAI-Logitech-compat%C3%ADvel/dp/B09XF2FCDB/ref=asc_df_B09XF2FCDB/?tag=googleshopp00-20&amp;linkCode=df0&amp;hvadid=709884378379&amp;hvpos=&amp;hvnetw=g&amp;hvrand=1638510548737706438&amp;hvpone=&amp;hvptwo=&amp;hvqmt=&amp;hvdev=c&amp;hvdvcmdl=&amp;hvlocint=&amp;hvlocphy=9198255&amp;hvtargid=pla-1952011121161&amp;mcid=c8274424d32430a18733d1857d73adb9&amp;gad_source=1&amp;th=1" target="_blank">Comprar</a>
+                      </div>     
+                      
+                      <div class="item perifericos">
+                <div class="quantidade">1</div>
+                          <img src="https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/r/z/rz05-02470100-r3u14.jpg" alt="Caixa de Som  Razer Nommo PRO 2.1">
+                          <h3>Caixa de Som  Razer Nommo PRO 2.1</h3>
+                          <div class="price">R$ 3823,41</div>
+                          <a href="https://www.pichau.com.br/caixa-de-som-razer-nommo-pro-2-1-rz05-02470100-r3u1" target="_blank">Comprar</a>
+                      </div>     
+                      
+                      <div class="item perifericos">
+                <div class="quantidade">1</div>
+                          <img src="https://images8.kabum.com.br/produtos/fotos/sync_mirakl/135538/Headset-Gamer-Astro-A50-sem-fio-Base-Xbox-One-e-PC_1719510542_g.jpg" alt="Headset Gamer Astro A50 sem fio + Base">
+                          <h3>Headset Gamer Astro A50 sem fio + Base</h3>
+                          <div class="price">R$ 3399,10</div>
+                          <a href="https://www.kabum.com.br/produto/135538/headset-gamer-astro-a50-sem-fio-base-xbox-one-e-pc" target="_blank">Comprar</a>
+                      </div>      
+                      
+                      <div class="item perifericos">
+                <div class="quantidade">1</div>
+                          <img src="https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/m/i/mic-48-rgb-ma-bk2.jpg" alt="Microfone Streamplify Mic Arm">
+                          <h3>Microfone Streamplify Mic Arm</h3>
+                          <div class="price">R$ 459,99</div>
+                          <a href="https://www.pichau.com.br/microfone-streamplify-mic-arm-rgb-usb-preto-mic-48-rgb-ma-bk" target="_blank">Comprar</a>
+                      </div>       
+                      
+                      <div class="item perifericos">
+                <div class="quantidade">2</div>
+                          <img src="https://cdn.shopify.com/s/files/1/0556/5795/5430/files/4-StealthUltra.png?v=1707509911&amp;width=1400&amp;height=788&amp;crop=center" alt="Stealth Ultra Wireless">
+                          <h3>Stealth Ultra Wireless</h3>
+                          <div class="price">R$ 17010,93</div>
+                          <a href="https://www.turtlebeach.com/products/stealth-ultra-controller?&amp;Title=Default%20Title" target="_blank">Comprar</a>
+                      </div>       
+                      
+                      <div class="item perifericos">
+                <div class="quantidade">1</div>
+                          <img src="https://cdn.shopify.com/s/files/1/0556/5795/5430/files/VelocityOneFlight-VelocityOneRudder-VelocityOneStand-Bundle.png?v=1720704858&amp;width=1400&amp;height=1063&amp;crop=center" alt="VelocityOne Flight + VelocityOne Rudder Pedals + VelocityOne Stand Bundle">
+                          <h3>VelocityOne Flight + VelocityOne Rudder Pedals + VelocityOne Stand Bundle</h3>
+                          <div class="price">R$ 5130,93</div>
+                          <a href="https://www.turtlebeach.com/products/velocity-one-flight-deck?&amp;Title=Default%20Title" target="_blank">Comprar</a>
+                      </div>    
+                      
+                      <div class="item perifericos">
+                <div class="quantidade">1</div>
+                          <img src="https://cdn.shopify.com/s/files/1/0556/5795/5430/files/2-VelocityOneFlightdeck.png?v=1707532773&amp;width=2000&amp;height=1125&amp;crop=center" alt="VelocityOne™ Flightdeck">
+                          <h3>VelocityOne™ Flightdeck</h3>
+                          <div class="price">R$ 2830,93</div>
+                          <a href="https://www.turtlebeach.com/products/velocityone-flight-velocityone-rudder-velocityone-stand-bundle?&amp;Title=Default%20Title" target="_blank">Comprar</a>
+                      </div>      
+                      
+                      <div class="item perifericos">
+                <div class="quantidade">1</div>
+                          <img src="https://cdn.shopify.com/s/files/1/0556/5795/5430/files/2-VelocityOneRace.png?v=1711839468&amp;width=2000&amp;height=1125&amp;crop=center" alt="VelocityOne™ Race Wheel &amp; Pedal System">
+                          <h3>VelocityOne™ Race Wheel &amp; Pedal System</h3>
+                          <div class="price">R$ 4230,93</div>
+                          <a href="https://www.turtlebeach.com/products/velocity-one-race?&amp;Title=Default%20Title" target="_blank">Comprar</a>
+                      </div>  
+                      
+                      <div class="item perifericos">
+                <div class="quantidade">1</div>
+                          <img src="https://cdn.shopify.com/s/files/1/0556/5795/5430/files/2_MediaGallery_VelocityOne_Multi-Shift_2400x1350_e3f67eda-55a5-4607-89af-a300704a1bfc.png?v=1727880516&amp;width=2000&amp;height=1125&amp;crop=center" alt="VelocityOne™ Multi-Shift">
+                          <h3>VelocityOne™ Multi-Shift</h3>
+                          <div class="price">R$ 630,93</div>
+                          <a href="https://www.turtlebeach.com/products/velocity-one-multi-shift?&amp;Title=Default%20Title" target="_blank">Comprar</a>
+                      </div>   
+                      
+                      
+                      <div class="item perifericos">
+                <div class="quantidade">1</div>
+                          <img src="data:image/jpeg;base64,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" alt="Freio de Mão Usb">
+                          <h3>Freio de Mão Usb</h3>
+                          <div class="price">R$ 550,93</div>
+                          <a href="https://a.co/d/gssFL1A" target="_blank">Comprar</a>
+                      </div>   
+                      
+                      
+                      <div class="item perifericos">
+                <div class="quantidade">1</div>
+                          <img src="https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/1/0/10gbd9901.jpg" alt="Stream Deck + Elgato">
+                          <h3>Stream Deck + Elgato</h3>
+                          <div class="price">R$ 459,99</div>
+                          <a href="https://www.pichau.com.br/stream-deck-elgato-8-teclas-com-controladora-preto-10gbd9901" target="_blank">Comprar</a>
+                      </div>  
+                      
+                      
+                      <div class="item perifericos">
+                <div class="quantidade">1</div>
+                          <img src="https://http2.mlstatic.com/D_NQ_NP_676058-MLA79905856649_102024-O.webp" alt="Dock Station 2 Baias Para Hd/ssd">
+                          <h3>Dock Station 2 Baias Para Hd/ssd</h3>
+                          <div class="price">R$ 665,90</div>
+                          <a href="https://www.mercadolivre.com.br/dock-station-2-baias-para-hdssd-2535-usb32-gen2-10gbps-127220v/p/MLB41816854?item_id=MLB3877199601&amp;from=gshop&amp;matt_tool=34055620&amp;matt_word=&amp;matt_source=google&amp;matt_campaign_id=14303413817&amp;matt_ad_group_id=125984303677&amp;matt_match_type=&amp;matt_network=g&amp;matt_device=c&amp;matt_creative=539354956998&amp;matt_keyword=&amp;matt_ad_position=&amp;matt_ad_type=pla&amp;matt_merchant_id=735128761&amp;matt_product_id=MLB41816854-product&amp;matt_product_partition_id=2267823656569&amp;matt_target_id=pla-2267823656569&amp;cq_src=google_ads&amp;cq_cmp=14303413817&amp;cq_net=g&amp;cq_plt=gp&amp;cq_med=pla&amp;gad_source=1&amp;gclid=CjwKCAjw68K4BhAuEiwAylp3ku5v61LsEzQm_9twHk2bDxtfTEc3PSNk8ERWXku6NG38nYtfYn4TChoCthoQAvD_BwE" target="_blank">Comprar</a>
+                      </div>    
+                      
+                      
+                      <div class="item perifericos">
+                <div class="quantidade">1</div>
+                          <img src="https://images6.kabum.com.br/produtos/fotos/sync_mirakl/602366/Monitor-Gamer-Samsung-Odyssey-OLED-G9-49-Dqhd-Tela-Curva-Ultrawide-Painel-OLED-240hz-0-03ms-Hdr10-Has-Micro-HDMI-Dp-Usb-Hub-Silver_1725393891_g.jpg" alt="Monitor Samsung Odyssey OLED G9">
+                          <h3>Monitor Samsung Odyssey OLED G9</h3>
+                          <div class="price">R$ 11051,58</div>
+                          <a href="https://www.kabum.com.br/produto/602366/monitor-gamer-samsung-odyssey-oled-g9-49-dqhd-tela-curva-ultrawide-painel-oled-240hz-0-03ms-hdr10-has-micro-hdmi-dp-usb-hub-silver" target="_blank">Comprar</a>
+                      </div>   
+                      
+                      
+                      <div class="item perifericos">
+                <div class="quantidade">1</div>
+                          <img src="https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/v/k/vk1560-us2.jpg" alt="Mesa-Digitalizadora Veikk VK1560, 15.6 Pol">
+                          <h3>Mesa-Digitalizadora Veikk VK1560, 15.6 Pol</h3>
+                          <div class="price">R$ 4705,87</div>
+                          <a href="https://www.pichau.com.br/display-interativo-veikk-vk1560-15-6-pol-5080-lpi-niveis-de-pressao-8192-vk1560-us" target="_blank">Comprar</a>
+                      </div>   
+                      
+                      
+                      <div class="item perifericos">
+                <div class="quantidade">1</div>
+                  <img src="https://images0.kabum.com.br/produtos/fotos/114660/suporte-articulado-para-monitor-elg-com-pistao-f90usb_1680207660_g.jpg" alt="Suporte Articulado para Monitor ELG, com Pistão - F90USB">
+                    <h3>Suporte Articulado para Monitor ELG, com Pistão - F90USB</h3>
+                          <div class="price">R$ 239,87</div>
+                          <a href="https://www.kabum.com.br/produto/114660/suporte-articulado-para-monitor-elg-com-pistao-f90usb?utm_id=21416437422&amp;gad_source=1&amp;gclid=CjwKCAjw68K4BhAuEiwAylp3kv3EyG2HpsEbf1cj0ikG2dnOK1X5d9GJBuN8yInedsFGGhIoaD-IfxoCUK8QAvD_BwE" target="_blank">Comprar</a>
+                      </div>   
+                      
+                      <div class="item moveis">
+                <div class="quantidade">1</div>
+                          <img src="https://http2.mlstatic.com/D_NQ_NP_751873-MLB79056785004_092024-O.webp" alt="Base Para Monitor com Usb">
+                          <h3>Base Para Monitor com Usb</h3>
+                          <div class="price">R$ 209,87</div>
+                          <a href="https://produto.mercadolivre.com.br/MLB-3341743443-base-para-monitor-usb-com-suporte-celular-hub-c3-tech-_JM?matt_tool=76735400&amp;matt_word=&amp;matt_source=google&amp;matt_campaign_id=14303413823&amp;matt_ad_group_id=125984298717&amp;matt_match_type=&amp;matt_network=g&amp;matt_device=c&amp;matt_creative=539354957010&amp;matt_keyword=&amp;matt_ad_position=&amp;matt_ad_type=pla&amp;matt_merchant_id=311062831&amp;matt_product_id=MLB3341743443&amp;matt_product_partition_id=2323205203367&amp;matt_target_id=pla-2323205203367&amp;cq_src=google_ads&amp;cq_cmp=14303413823&amp;cq_net=g&amp;cq_plt=gp&amp;cq_med=pla&amp;gad_source=1&amp;gclid=CjwKCAjw68K4BhAuEiwAylp3kjguruq4R5oUxh_Uyw4LDS0lL45SgMKn0NwVEJK0BH3j6ALAwgC2TRoCA9oQAvD_BwE" target="_blank">Comprar</a>
+                      </div>   
+                      
+                   <div class="item moveis">
+                <div class="quantidade">2</div>
+                          <img src="https://images9.kabum.com.br/produtos/fotos/471959/mesa-office-kabum-tech-dt900-preta-com-regulagem-de-altura-automatica-memorizacao-4-usuarios-anti-esmagamento-ktdt900pt_1702921048_g.jpg" alt="Mesa TECH DT900 Preta">
+                          <h3>Mesa TECH DT900 Preta</h3>
+                          <div class="price">R$ 1420,90</div>
+                          <a href="https://www.kabum.com.br/produto/471959/mesa-office-kabum-tech-dt900-preta-com-regulagem-de-altura-automatica-memorizacao-4-usuarios-anti-esmagamento-ktdt900pt" target="_blank">Comprar</a>
+                      </div>    
+                      
+                      
+                   <div class="item moveis">
+                <div class="quantidade">1</div>
+                          <img src="https://images.kabum.com.br/produtos/fotos/24340/mesa-multivisao-para-notebook-nt-home-preto-34219_mesa-multivisao-para-notebook-nt-home-preto-34219_1564774993_gg.jpg" alt="Mesa Multivisão para Notebook NT-HOME Preto">
+                          <h3>Mesa Multivisão para Notebook NT-HOME Preto</h3>
+                          <div class="price">R$ 120,90</div>
+                          <a href="https://www.kabum.com.br/produto/471959/mesa-office-kabum-tech-dt900-preta-com-regulagem-de-altura-automatica-memorizacao-4-usuarios-anti-esmagamento-ktdt900pt" target="_blank">Comprar</a>
+                      </div>    
+                      
+                   <div class="item moveis">
+                <div class="quantidade">1</div>
+                          <img src="https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/3/m/3mternxb00016.jpg" alt="Cadeira Gamer Cougar Terminator">
+                          <h3>Cadeira Gamer Cougar Terminator</h3>
+                          <div class="price">R$ 6882,23</div>
+                          <a href="https://www.pichau.com.br/cadeira-gamer-cougar-terminator-preto-3mternxb-0001?srsltid=AfmBOoo_zAk6ajzKWJnXsZ98iwwnJgKjVHeD0gMhY5KFgHunV2QxuuG7" target="_blank">Comprar</a>
+                      </div>      
+                      
+                         <div class="item perifericos">
+                <div class="quantidade">1</div>
+                          <img src="https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/9/1/91g0014100.jpg" alt="Alimentação Nobreak Gamer NHS Ultra Senoida">
+                          <h3>Alimentação Nobreak Gamer NHS Ultra Senoida</h3>
+                          <div class="price">R$ 2352,93</div>
+                          <a href="https://www.pichau.com.br/nobreak-gamer-nhs-ultra-senoidal-rgb-1400va-840w-entrada-bivolt-saida-120v-preto-91-g0-014100" target="_blank">Comprar</a>
+                      </div>
+
+                         <div class="item perifericos">
+                        <div class="quantidade">1</div>
+                        <img src="https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/e/p/epr-208_.jpg" alt="Filtro de Linha Intelbras EPR 208+, 8 Tomadas">
+                        <h3>Filtro de Linha Intelbras EPR 208+, 8 Tomadas</h3>
+                        <div class="price">R$ 105,93</div>
+                        <a href="https://www.pichau.com.br/filtro-de-linha-intelbras-epr-208-8-tomadas-3m-preto-epr-208m" target="_blank">Comprar</a>
+                    </div>    
+                
+                    <div class="item moveis">
+                        <div class="quantidade">1</div>
+                        <img src="https://a-static.mlcdn.com.br/450x450/luminaria-de-mesa-abajur-de-quarto-4-em-1-carregador-inducao-rgb-cor-preto-110v-220v-g36-black/storempm/2b42f9523df911ef946b4201ac18501b/0da33ff73183c9f9233105010d9ee1a6.jpeg" alt="Luminária De Mesa Abajur Rgb">
+                        <h3>Luminária De Mesa Abajur Rgb</h3>
+                        <div class="price">R$ 105,93</div>
+                        <a href="https://www.amazon.com.br/Lumin%C3%A1ria-Bluetooth-Tecnologia-Carregador-Ambiente/dp/B0CGST1KZG/ref=asc_df_B0CGST1KZG/?tag=googleshopp00-20&amp;linkCode=df0&amp;hvadid=709968341020&amp;hvpos=&amp;hvnetw=g&amp;hvrand=16278600121479085494&amp;hvpone=&amp;hvptwo=&amp;hvqmt=&amp;hvdev=c&amp;hvdvcmdl=&amp;hvlocint=&amp;hvlocphy=9198255&amp;hvtargid=pla-2202223816251&amp;psc=1&amp;mcid=c3597134a64c3b119b3a770e83c3ff90&amp;gad_source=4" target="_blank">Comprar</a>
+                    </div>     
+                
+                       <div class="item perifericos">
+                        <div class="quantidade">1</div>
+                        <img src="https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/m/f/mfc-l2750dw.jpg" alt="Impressora Brother MFC, Multifuncional">
+                        <h3>Impressora Brother MFC, Multifuncional</h3>
+                        <div class="price">R$ 4235,93</div>
+                        <a href="https://www.pichau.com.br/impressora-brother-mfc-multifuncional-laser-monocromatico-110v-wireless-mfc-l2750dw" target="_blank">Comprar</a>
+                    </div>            
+
+                    </div>
+
+
+          <div class="total">
+            <div id="totalValue"></div>
+          </div>
+      </main>
+  <!-- Code injected by live-server -->
+      
+      <footer class="carousel-body">
+          <div class="carousel-wrapper">
+              <div class="carousel">
+                  <!-- Cada div com a classe "item" representa um slide no carrossel -->
+                  <div class="item"><img src="https://logo.clearbit.com/apple.com" alt="Apple"></div>
+                  <div class="item"><img src="https://logo.clearbit.com/google.com" alt="Google"></div>
+                  <div class="item"><img src="https://logo.clearbit.com/amazon.com" alt="Amazon"></div>
+                  <div class="item"><img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft"></div>
+                  <div class="item"><img src="https://logo.clearbit.com/facebook.com" alt="Facebook"></div>
+                  <div class="item"><img src="https://logo.clearbit.com/netflix.com" alt="Netflix"></div>
+                  <div class="item"><img src="https://logo.clearbit.com/tesla.com" alt="Tesla"></div>
+                  <div class="item"><img src="https://logo.clearbit.com/nike.com" alt="Nike"></div>
+                  <div class="item"><img src="https://logo.clearbit.com/adidas.com" alt="Adidas"></div>
+                  <div class="item"><img src="https://logo.clearbit.com/coca-cola.com" alt="Coca-Cola"></div>
+                  
+                  <!-- Repetição dos itens para criar um loop contínuo na animação -->
+                  <div class="item"><img src="https://logo.clearbit.com/apple.com" alt="Apple"></div>
+                  <div class="item"><img src="https://logo.clearbit.com/google.com" alt="Google"></div>
+                  <div class="item"><img src="https://logo.clearbit.com/amazon.com" alt="Amazon"></div>
+                  <div class="item"><img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft"></div>
+              </div>
+          </div>
+      </footer>
+
+
+<script src="./index.js"></script>
+<script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    // Ativa o botão "Tudo"
+    const tudoButton = document.querySelector("nav ul li.active button");
+    if (tudoButton) {
+        tudoButton.click(); // Simula um clique no botão "Tudo"
+    }
+
+    // O restante do seu código para mostrar todos os itens
+    const allCards = document.querySelectorAll(".card"); // Ajuste o seletor conforme necessário
+    allCards.forEach(card => {
+        card.style.display = "block"; // Altere para "flex" ou outro valor se necessário
+    });
+
+    // Se você tem um sistema de abas ou algo que precisa ser ativado
+    const allSections = document.querySelectorAll(".section"); // Ajuste o seletor conforme necessário
+    allSections.forEach(section => {
+        section.style.display = "block"; // Exibindo todas as seções
+    });
+});
+
+</script>
+
+</body>
+</html>
+
+

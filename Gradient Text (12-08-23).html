@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Text (12-08-23)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<style>
+ 
+</style>
+</head>
+<body>
+  
+     
+<script>
+  let index = 0,
+    interval = 1000;
+
+const rand = (min, max) => 
+  Math.floor(Math.random() * (max - min + 1)) + min;
+
+const animate = star => {
+  star.style.setProperty("--star-left", `${rand(-10, 100)}%`);
+  star.style.setProperty("--star-top", `${rand(-40, 80)}%`);
+
+  star.style.animation = "none";
+  star.offsetHeight;
+  star.style.animation = "";
+}
+
+for (const star of document.getElementsByClassName("magic-star")) {
+  setTimeout(() => {
+    animate(star);
+    setInterval(() => animate(star), 1000);
+  }, index++ * (interval / 3))
+}
+</script>
+</body>
+</html>

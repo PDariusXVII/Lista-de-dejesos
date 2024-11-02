@@ -1,0 +1,165 @@
+
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    .letras ul {
+        flex-direction: column; /* Alinha os itens verticalmente em telas menores */
+        gap: 5px;               /* Adiciona um espaçamento entre os itens */
+    }
+
+    .letras ul li {
+        padding: 10px;          /* Aumenta o espaço ao redor de cada item para facilitar o toque */
+        text-align: center;     /* Centraliza o texto dos itens */
+    }
+
+    .letras ul li a {
+        font-size: 12px;        /* Reduz o tamanho da fonte para caber melhor na tela */
+    }
+
+    h4 {
+        font-size: 1.5em;       /* Reduz o tamanho do texto do título */
+        letter-spacing: 2px;    /* Ajusta o espaçamento das letras */
+        padding: 10px;          /* Adiciona um preenchimento ao redor para melhorar o layout em mobile */
+    }
+}
+
+/* Animação */
+@keyframes anime {
+    0%, 5% {
+        background-position: -500%;
+    }
+    95%, 100% {
+        background-position: 500%;
+    }
+}
+
+
+
+
+
+/* Estilos específicos para dispositivos com largura máxima de 600px */
+@media (max-width: 600px) {
+    .item-container {
+        gap: 10px;
+    }
+
+    .item {
+        width: 100%; /* Cada item ocupa a largura total em dispositivos menores */
+        max-width: 180px; /* Limita a largura máxima */
+        padding: 10px;
+        margin: 5px auto;
+    }
+
+    .item h3 {
+        font-size: 14px;
+    }
+
+    .item .price {
+        font-size: 16px;
+    }
+
+    .item a {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    .total {
+        font-size: 18px;
+        margin-top: 15px;
+    }
+
+    .quantidade {
+        height: 35px;
+        width: 35px;
+        font-size: 12px;
+        line-height: 35px;
+    }
+}
+
+   /* Exibir Dropdown no Mobile */
+@media (max-width: 768px) {
+    /* Ocultar menu padrão no desktop */
+.menu {
+    display: none; /* Oculta o menu padrão */
+}
+    .dropdown-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #33333325;
+        padding: 5px;
+        width: 45%;
+        border-radius: 8px; /* Cantos arredondados para um visual mais suave */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para destacar */
+    }
+    .dropdown-button {
+        color: #fff;
+        width: 150px;
+        text-align: left;
+        background-color: #0090b428;
+        border: none;
+        cursor: pointer;
+        font-size: 1.2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: background-color 0.3s ease;
+        border-radius: 4px;
+    }
+    .dropdown-button:hover {
+        background-color: #666; /* Cinza mais claro ao passar o mouse */
+    }
+
+    .dropdown-list {
+        list-style: none;
+        padding: 0;
+        margin-top: 5px;
+        width: 150px;
+        display: none;
+        border-radius: 4px;
+        overflow: hidden; /* Remove cantos pontudos */
+    }
+
+    .dropdown-list li {
+        background-color: #55555546;
+        padding: 0.4rem;
+        text-align: center;
+        transition: background-color 0.3s ease;
+    }
+
+    .dropdown-list li:hover {
+        background-color: #777; /* Cinza mais claro ao passar o mouse */
+        transform: scale(1.05); /* Efeito de leve aumento */
+    }
+
+    .dropdown-list li a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+    }
+}
+
+/* Ocultar dropdown por padrão */
+.dropdown-container {
+    display: none; /* Oculta por padrão, visível apenas no mobile */
+}
+
+/* Exibir Dropdown no Mobile */
+@media (max-width: 768px) {
+    .dropdown-container {
+        display: flex; /* Mostra o menu no mobile */
+        flex-direction: column;
+        align-items: center;
+        background-color: #33333325;
+        padding: 5px;
+        width: 45%;
+        border-radius: 8px; /* Cantos arredondados */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra */
+    }
+
+    .dropdown-list {
+        display: none; /* Oculta a lista inicialmente */
+    }
+
+    /* Adicione as regras para o botão e lista como discutido anteriormente */
+}
