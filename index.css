@@ -1,0 +1,29 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #01335e;
+}
+
+/*CABEÇALHHO*/
+header {
+    padding: 12px;
+    background-color: #0058A3;
+    color: white;
+    display: flex;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Distribui espaço entre os elementos */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    padding: 10px;
+}
+/*FIM CABEÇALHHO*/
+
+

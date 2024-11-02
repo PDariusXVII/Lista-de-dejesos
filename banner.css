@@ -1,0 +1,77 @@
+
+.letras {
+    background-color: #FF6D00;
+    padding: 5px 0;
+}
+
+.letras ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.letras ul li {
+    padding: 5px 15px;
+}
+
+.letras ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.letras ul li a:hover {
+    text-decoration: underline;
+}
+
+
+
+        h4 {
+            position: relative;
+            font-family: sans-serif;
+            text-transform: uppercase;
+            font-size: 2em;
+            letter-spacing: 4px;
+            background: linear-gradient(90deg, #000, #fff, #000);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: rgba(255, 255, 255, 0);
+            overflow: hidden;
+            background-repeat: no-repeat;
+            background-size: 80%;
+            animation: anime 5s infinite linear;
+            
+            /* Adicionando flexbox para centralização */
+            display: flex;               /* Ativa o modelo flexbox */
+            justify-content: center;     /* Centraliza horizontalmente */
+            align-items: center;         /* Centraliza verticalmente */
+            text-align: center;          /* Alinha o texto ao centro */
+          }
+          
+          /* Animação */
+          @keyframes anime {
+            0% {
+              background-position: -500%;
+            }
+            100% {
+              background-position: 500%;
+            }
+            5% {
+              background-position: -500%;
+            }
+            95% {
+              background-position: 500%;
+            }
+            0% {
+              background-position: -500%;
+            }
+            100% {
+              background-position: 500%;
+            }
+            5% {
+              background-position: -500%;
+            }
+            95% {
+              background-position: 500%;
+            }
+          }
